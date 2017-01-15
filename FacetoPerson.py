@@ -13,10 +13,14 @@ import webbrowser, os #needed in order to navigate to specific Facebook site
 from fbrecog import recognize #imports face recognition needed
 
 
+import os.path #manual saving
 
-#path = '/.drew.jpg'
 
 '''
+Blocked out due to no 'Important.txt' file. If access codes were stored off program,
+
+
+
 filename = 'Important.txt'
 
 
@@ -37,7 +41,6 @@ filereader.close()
 
 
 
-
 def matcher():
 
     array = recognize(path,access_token,cookies,fb_dtsg)
@@ -48,7 +51,7 @@ def matcher():
         print(match)
         #name = []
         #return name.append(array[0]['name'])
-        return str(array[0]['name'])
+        return str(array[0]['name'] + ':' + str(matches[str(key)]))
 
     elif len(array) > 1:
         matches = {}
@@ -67,18 +70,6 @@ def matcher():
 
 
 '''
-    if len(array) == 1:
-        print('Here is the user we matched to the photo: ')
-        print(result)
-        visit_user = input("Would you like to visit the user's profile? Y/N\n")
-        if visit_user.upper() == Y:
-            lookup(key) #needs winning username
-            #return None **********************************************check
-        else:
-            restart = input('Do you have another photo you would like to use? Y/N \n')
-            if restart.upper() == 'Y':
-                recognize() #need to restart Facebook API
-
     elif len(array) == 0:
         print('The program returned no matches. ')
         restart = input('Do you have another photo you would like to use? Y/N \n')
@@ -114,20 +105,23 @@ def lookup(username):
 
 '''
 
-
-
-
-
-access_token = 'EAAQ4jYJPGZCYBAHEZCS5QmxhvLAT6ZB4ZAHwhuTWDA7Fw3YOsjy60Bz00k1fmeG9hE0A5gGnVyqrZBDMmiXyQJnelhM8mQx1GtV4RyPKRHP1ZBB5KwOz1ZA4EZCA9IZCUFosOYVjL1eSwQPkMAzfyFlz0aiqDuJ4ZAngnAAwAcgtNpMwZDZD'
+access_token = 'EAAQ4jYJPGZCYBAF3XkrwZAeZA7t8dNkWz2pWp8A51ehWsYcIckJWO1GyUrjQ4CDZA8HaKAdHI5bqWXpUiPvhEX4ZCkhZB02hUFYX33R1N29r4gCvnybHFYHSD0HCHlC0knXZCZC1J4nseGurbuNH4wmXEPeCNiAf0qhUhLlKarCIRQZDZD'
 cookies = 'datr=v94jV6FYsoDjcXtJA07NI3CW; lu=gAAhKMppCH_jMiD0DSUmuRXg; sb=yd4jVwqrv56caCxPhbFx3x9V; c_user=100001140458819; xs=119%3A8DKsSWTSPKCXig%3A2%3A1461968585%3A19449; fr=0gYKbsXA1zk19JSnp.AWWq093dzb-xUjsEZ_rkwdTAn5I.BXI97J._m.FhZ.0.0.BYenWj.AWWDpFyP; csm=2; s=Aa6UTgwLvMVHappN.BYedDW; p=-2; presence=EDvF3EtimeF1484420880EuserFA21B01140458819A2EstateFDutF1484420880314CEchFDp_5f1B01140458819F5CC; act=1484420905734%2F3'
 fb_dtsg = 'AQHf6f1fB-2V:AQHscGuQOiPK'
-path = '/home/rysterman34/Desktop/Hackathons/FamiliarFaceProject/metest.jpg' #Need to use photo path on phone
-
+test_path = '/home/rysterman34/Desktop/Hackathons/FamiliarFaceProject/Test4.jpg' #Need to use photo path on phone
+path = test_path #only until a verified, easy way to recieve the file path
 
 
 def main():
     print('This is working.')
     array = matcher()
+    #save_path = '/temp'
+    #filename = os.path.join(save_path, 'PythontoJava.txt')
+    if array == None:
+    	return None
+    filereader = open('PythontoJava.txt', 'w')
+    filereader.write(array)
+    filereader.close()
 
 if __name__ == '__main__':
     main()
