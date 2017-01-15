@@ -4,22 +4,23 @@
 #File Name: driver.py
 
 import facial_recognition
-from os import path
-from os import remove
+import os
 from time import sleep
 
-inputFile = "./input.txt"
+pathToOutput = "./faceimage.txt"
+
+# method to be called from Java
+#def inputFilePath(filePath):
+#    inputFile = filePath;
 
 # Listener for new or change of target file
 
 # the while loop is the "listeners"
-while not(path.exists(inputFile)):
+while not(os.path.exists(pathToOutput)):
     sleep(3)
 
-# once file is found, then activates the readWrite object
-readWriteObject = facial_recognition.readWrite(inputFile)
-inputFileInfo = readWriteObject.readFileInput(inputFile)
+# once file is found, then "capture" the absolute path to file and activates the readWrite object
+# os.system("ls -t | head -1")
+readWriteObject = facial_recognition.readWrite(pathToOutput)
+inputFileInfo = readWriteObject.readFileInput(pathToOutput)
 readWriteObject.writeToFile(inputFileInfo)
-
-# delete the input file
-remove(inputFile)

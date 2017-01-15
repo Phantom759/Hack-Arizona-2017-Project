@@ -4,10 +4,9 @@
 #File Name: facial_recognition.py
 
 import os
-# import ryan's 
+from FacetoPerson import *
 
-pathOutputFile = ""
-inputInformationOfPhoto = ""
+pathOutputFile = "./storage/emulated/0/DCIM/Camera/pythonToJava.txt"
 
 class readWrite(object):
     
@@ -15,18 +14,23 @@ class readWrite(object):
     def __init__(self, object):
         self.object = object
 
-    # Read file from java
+    # call the matching function
     def readFileInput(self, pathInputFile):
-        fileObject = open(pathInputFile, 'r')
-        inputInformationOfPhoto = fileObject.read()
-        fileObject.close()
+        #fileObject = open(pathInputFile, 'r')
+        #inputInformationOfPhoto = fileObject.read()
+        #fileObject.close()
+        #return inputInformationOfPhoto
 
-        return inputInformationOfPhoto
-
-    # facial recognition program from Ryan
+        # return variable from matching method
+        name = matcher()
+        return name
 
     # write in file information from recog method
     def writeToFile(self, inputInformationOfPhoto):
         fileobject2 = open(pathOutputFile, 'w')
         fileobject2.write(inputInformationOfPhoto)
         fileobject2.close()
+
+# return the path of the photo
+def photoPath():
+    return inputInformationOfPhoto
