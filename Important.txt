@@ -1,0 +1,8 @@
+﻿cookies: 'datr=v94jV6FYsoDjcXtJA07NI3CW; lu=gAAhKMppCH_jMiD0DSUmuRXg; sb=yd4jVwqrv56caCxPhbFx3x9V; c_user=100001140458819; xs=119%3A8DKsSWTSPKCXig%3A2%3A1461968585%3A19449; fr=0gYKbsXA1zk19JSnp.AWWq093dzb-xUjsEZ_rkwdTAn5I.BXI97J._m.FhZ.0.0.BYenWj.AWWDpFyP; csm=2; s=Aa6UTgwLvMVHappN.BYedDW; p=-2; presence=EDvF3EtimeF1484420880EuserFA21B01140458819A2EstateFDutF1484420880314CEchFDp_5f1B01140458819F5CC; act=1484420905734%2F3'
+
+fb_dtsg: 'AQHf6f1fB-2V:AQHscGuQOiPK'
+
+path: '/home/rysterman34/Desktop/Hackathons/FamiliarFaceProject/keithpic.jpg' 
+
+
+access_token: 'EAAQ4jYJPGZCYBAPPAwHAiI57LwW0ZCZANymajvDJcVg6Gy0Xf7uobJkUzXVI8fUpmpTaxB47mF9bi6Uut4qiBykKeFE0WZCypoCn9XZB7cXaLHppTct3mGm8T9LUPsD1apqLJbeaNSeCsDQFBoztPjC5aOKCGcnIYCGDjITFzgwZDZD' 
