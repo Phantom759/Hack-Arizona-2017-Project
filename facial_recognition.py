@@ -3,13 +3,30 @@
 #Project Name: Familiar Face
 #File Name: facial_recognition.py
 
-# methods
+import os
+# import ryan's 
 
-# Read file from java
+pathOutputFile = "./output.txt"
+inputInformationOfPhoto = ""
 
-# facial recognition program from Ryan
+class readWrite(object):
+    
+    # initialize the class
+    def __init__(self, object):
+        self.object = object
 
-# write in file information from recog method
+    # Read file from java
+    def readFileInput(self, pathInputFile):
+        fileObject = open(pathInputFile, 'r')
+        inputInformationOfPhoto = fileObject.read()
+        fileObject.close()
 
-# file listener from Java
-def fileListener()
+        return inputInformationOfPhoto
+
+    # facial recognition program from Ryan
+
+    # write in file information from recog method
+    def writeToFile(self, inputInformationOfPhoto):
+        fileobject2 = open(pathOutputFile, 'w')
+        fileobject2.write(inputInformationOfPhoto)
+        fileobject2.close()

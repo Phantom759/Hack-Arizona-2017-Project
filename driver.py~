@@ -1,0 +1,10 @@
+#Author: Steven Broussard                                                                                                                                                       
+#Date Created: January 15, 2017                                                                                                                                                 
+#Project Name: Familiar Face                                                                                                                                                    
+#File Name: driver.py
+
+import facial_recognition
+
+facial_recognition.readFileInput()
+
+facial_recognition.writeToFile()
