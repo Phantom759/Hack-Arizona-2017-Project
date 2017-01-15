@@ -6,7 +6,7 @@
 import os
 # import ryan's 
 
-pathOutputFile = "./output.txt"
+pathOutputFile = ""
 inputInformationOfPhoto = ""
 
 class readWrite(object):
